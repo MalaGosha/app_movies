@@ -1,0 +1,57 @@
+.greeting_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../img/cosmosImage.jpg);
+}
+
+.farewell_page, .page_not_found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(56, 54, 54, 0.89);
+}
+
+h1, h2 {
+    display: flex;
+    justify-content: center;
+    color: rgb(243, 205, 16);
+    font-size: 3em;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+}
+
+.btn_greeting, .btn_farewell, .go_back{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(243, 205, 16);
+    background-color: rgba(227, 227, 231, 0.8);
+    cursor: pointer;
+    color: #0c0c0c;
+    font-weight: bold;
+}
+
+.btn_greeting:hover, .btn_farewell:hover, .go_back:hover{
+    background-color: rgba(6,6,6,0.89);
+    color: rgb(243, 205, 16);
+    font-weight: bold;
+}
+
+.btn_greeting:active, .btn_farewell:active, .go_back:active {
+    position: relative;
+    top: 2px;
+    box-shadow: 0px 10px 25px -1px rgb(40, 40, 47);
+}
+
+
