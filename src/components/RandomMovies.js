@@ -5,16 +5,15 @@ import MovieFromGrid from "./MovieFromGrid";
 import {Link} from 'react-router-dom';
 import "../style/grid.css";
 
-
 export default function RandomMovies() {
     const [randomMovies, setRandomMovies] = useState([]);
 
     useEffect(() => {
         getRandomMovies().then(movies => {
-            let items = movies.items;
+            const items = movies.items;
             let randomMovies = [];
             for (let i = 0; i < 12; i++) {
-                let number = Math.floor(Math.random() * items.length);
+                const number = Math.floor(Math.random() * items.length);
                 randomMovies.push(items[number])
             }
             setRandomMovies(randomMovies);
@@ -36,7 +35,7 @@ export default function RandomMovies() {
                 )}
             </div>
         </div>
-    )
+    );
 }
 
 

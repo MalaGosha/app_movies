@@ -4,12 +4,11 @@ import Search from "./Search";
 import '../style/navbar.css';
 import '../img/starWars.png';
 
-
 export default function Navbar() {
     return (
         <div className='navbar'>
             <Search/>
-            <Link className='navbar_link' to='/main-page/in-cinemas'>
+            <Link className='navbar_link' to='/main-page/box-office'>
                 <div className='btn_navbar'>
                     Box Office
                 </div>
@@ -20,5 +19,5 @@ export default function Navbar() {
                 </div>
             </Link>
         </div>
-    )
+    );
 }

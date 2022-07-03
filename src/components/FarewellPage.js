@@ -2,7 +2,6 @@ import '../style/navbar.css';
 import { Link } from "react-router-dom";
 import '../style/inAndOutPage.css';
 
-
 export default function FarewellPage() {
     return (
         <div className='farewell_page'>

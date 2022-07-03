@@ -6,46 +6,40 @@ import '../style/navbar.css';
 
 export default function Search() {
     const [searchField, setSearchField] = useState();
-    const [matchMovies, setMatchMovie] = useState([]);
-    const [state, setState] = useState(true);
+    const [matchMovies, setMatchMovies] = useState([]);
 
     useEffect(() => {
-        getSearchMovies(searchField).then(arrayMatchMovies => {
-            let searchMovies = [];
-            searchMovies.push(arrayMatchMovies);
-            setMatchMovie(searchMovies);
-        })
-    }, []);
+        // getSearchMovies(searchField).then(arrayMatchMovies => {
+        //     const searchMovies = [];
+        //     searchMovies.push(arrayMatchMovies);
+        //     setMatchMovies(searchMovies);
+        // })
+        console.log("AAA");
+    }, [searchField]);
 
-    let handleChange = e => {
+    const handleChange = e => {
         setSearchField(e.target.value);
     }
 
-    let handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("I got this!")
     }
 
-    let handleClick = () => {
-        setState(false);
+    const handleClick = () => {
+
     }
 
-    console.log(searchField)
-    console.log(matchMovies)
-
-    return (state) ? (
+    return (
             <form className='search_engine' onSubmit={handleSubmit}>
                 <input className='search' type='text' placeholder='Enter a title to search for a movie'
                        onChange={handleChange}/>
+                <Link to={'/main-page/match-movies/movie-details/' + matchMovies.id}>
                 <button className='btn_search' onClick={handleClick}>
                     search
                 </button>
+                </Link>
             </form>
+    )
 
-    ) : (
-        <Link to={'/main-page/match-movies/movie-details/' + matchMovies.id}>
-            <MatchMovies matchMovies={matchMovies}/>
-        </Link>
-    );
 }
 

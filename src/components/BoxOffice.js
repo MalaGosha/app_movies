@@ -1,10 +1,9 @@
-import React, { useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import {Link} from 'react-router-dom';
 import {getMoviesBoxOffice} from "../api/getMoviesBoxOffice";
 import MovieFromGrid from "./MovieFromGrid";
 import Navbar from "./Navbar";
 import '../style/grid.css';
-
 
 export default function BoxOffice() {
     const [moviesInCinemas, setMoviesInCinemas] = useState([]);
@@ -21,12 +20,12 @@ export default function BoxOffice() {
             <Navbar/>
             <div className='box_grid'>
                 <div className='title_grid'>
-                    In cinemas
+                    Box Office
                 </div>
                 <div className='grid'>
                     {moviesInCinemas.map(movie =>
                         <div className='movie_grid' key={movie.id}>
-                            <Link to={"/main-page/in-cinemas/movie-details/" + movie.id}>
+                            <Link to={"/main-page/box-office/movie-details/" + movie.id}>
                                 <MovieFromGrid movie={movie}/>
                             </Link>
                         </div>
@@ -34,5 +33,5 @@ export default function BoxOffice() {
                 </div>
             </div>
         </>
-    )
+    );
 }

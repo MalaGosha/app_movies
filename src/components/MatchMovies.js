@@ -23,5 +23,5 @@ export default function MatchMovies({matchMovies}) {
                 </div>
             </div>
         </>
-    )
+    );
 }

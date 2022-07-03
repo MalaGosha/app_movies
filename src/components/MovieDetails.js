@@ -10,8 +10,6 @@ export default function MovieDetails() {
     const [trailer, setTrailer] = useState({});
     let {id} = useParams();
 
-    console.log(id)
-
     useEffect(() => {
         getMovieById(id).then(movie => {
             setMovieDetails(movie)
@@ -27,8 +25,7 @@ export default function MovieDetails() {
     return (
         <>
             <Navbar/>
-
-            < div className="card_movie">
+            <div className="card_movie">
                 <div className="title_movie_details">{movieDetails.title}</div>
                 <div className='img_movie_details'>
                     <img src={movieDetails.image} alt="Posters" width='192' height='264'/>
@@ -56,5 +53,5 @@ export default function MovieDetails() {
                 </Link>
             </div>
         </>
-    )
+    );
 }
