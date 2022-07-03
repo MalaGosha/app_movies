@@ -1,4 +1,4 @@
-const movieUrl = 'https://imdb-api.com/en/API/Title/k_68lg9rg4/'
+const movieUrl = 'https://imdb-api.com/en/API/Title/k_7dk17uyh/'
 
 export async function getMovieById(id) {
     return fetch(movieUrl + id , {

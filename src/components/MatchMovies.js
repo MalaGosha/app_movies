@@ -7,7 +7,7 @@ import {MovieContext} from "../MovieContext";
 
 export default function MatchMovies() {
 
-    const {matchMovies, setMatchMovie} = useContext(MovieContext);
+    const {matchMovies} = useContext(MovieContext);
 
     return (
         <>

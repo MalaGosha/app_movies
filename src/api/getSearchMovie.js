@@ -1,4 +1,4 @@
-const searchMovieUrl = 'https://imdb-api.com/en/API/SearchMovie/k_68lg9rg4/';
+const searchMovieUrl = 'https://imdb-api.com/en/API/SearchMovie/k_7dk17uyh/';
 
 export async function getSearchMovies(movieToFind) {
     return fetch(searchMovieUrl + movieToFind, {

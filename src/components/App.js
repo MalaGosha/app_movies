@@ -22,7 +22,7 @@ export default function App() {
             <Route path="/main-page/coming-soon" element={<ComingSoon/>}/>
             <Route path="/main-page/coming-soon/movie-details/:id" element={<MovieDetails/>}/>
             <Route path='/main-page/match-movies/' element={<MatchMovies/>} />
-            <Route path="/main-page/match-movies/movie-details/:id" element={<MovieDetails/>}/>
+            <Route path="/main-page/match-movies/:id" element={<MovieDetails/>}/>
             <Route path="*" element={<PageNotFound/>}/>
         </Routes>
     );
